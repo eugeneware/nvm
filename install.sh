@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ `whoami` == 'root' ]; then
+if [ `whoami` = 'root' ]; then
   NVM_DIR="/usr/local/nvm"
 else
   NVM_DIR="$HOME/.nvm"
@@ -19,7 +19,7 @@ git clone https://github.com/creationix/nvm.git $NVM_DIR
 echo
 
 # Detect profile file, .bash_profile has precedence over .profile
-if [ `whoami` == 'root' ]; then
+if [ `whoami` = 'root' ]; then
   PROFILE="/etc/bash.bashrc"
 elif [ ! -z "$1" ]; then
   PROFILE="$1"
@@ -32,7 +32,7 @@ else
 fi
 
 # Set permissions for multi user environment
-if [ `whoami` == 'root' ]; then
+if [ `whoami` = 'root' ]; then
   mkdir -p $NVM_DIR/alias
   chmod -R u+rwX,g+rwX,o+rX $NVM_DIR
 fi
