@@ -34,7 +34,7 @@ fi
 # Set permissions for multi user environment
 if [ `whoami` = 'root' ]; then
   mkdir -p $NVM_DIR/alias
-  chmod -R u+rwX,g+rwX,o+rX $NVM_DIR
+  chmod -R u+rwX,g+rwX,o+rwX $NVM_DIR
 fi
 
 SOURCE_STR="[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads NVM"
